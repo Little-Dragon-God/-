@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{width: 200px;height: 300px;}
+    </style>
+    <script>
+        //定义一个带参函数，函数只定义没调用，是不会执行的
+        function  changColor(color){
+            //获取元素的id
+            var oDiv1 = document.getElementById("div1");
+            oDiv1.style.background=color;
+        }
+    </script>
+</head>
+<body>
+//通过点击事件调用函数
+<input type="button" value="变红" onclick="changColor('red')">
+<input type="button" value="变黄" onclick="changColor('yellow')">
+<input type="button" value="变绿" onclick="changColor('green')">
+<div id="div1"></div>
+</body>
+</html>
