@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function fun1(){
+				console.log('fun1执行了');
+			}
+			function fun2(){
+				console.log('fun2执行了');
+			}
+			function fun3(){
+				console.log('fun3执行了');
+			}
+		</script>
+	</head>
+	<body>
+		<!-- 点击事件onclick,通过方法名调用执行函数，执行多个函数用，隔开 onmouseover鼠标悬停触发事件 -->
+		<input type="button" value="按钮" onclick="fun1(),fun2()" onmouseover="fun3()" />
+	</body>
+</html>
