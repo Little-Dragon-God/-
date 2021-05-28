@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{width: 200px;height: 200px;border-style: solid}
+    </style>
+    <script>
+        function setStyle(name,value) {
+            var element = document.getElementById("div1");
+            //操作属性的方法,要操作属性不固定时用
+            //name属性名，value属性值,传的都是字符串
+            //style操作样式都是行间样式
+            /*style和className
+            元素.style.属性=xxx，操作行间样式
+            之后再修改className不会有效果，因为行间样式优先级更高，建议操作的元素都采用同一种方法，避免优先级问题
+            * */
+            element.style[name]=value;
+        }
+    </script>
+</head>
+
+<body>
+<input type="button" value="变宽" onclick="setStyle('width','600px')">
+<input type="button" value="变矮" onclick="setStyle('height','100px')">
+<input type="button" value="变绿" onclick="setStyle('background','green')">
+<div id="div1" ></div>
+</body>
+</html>

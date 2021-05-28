@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//实例化对象
+			var obj = new Object();
+			//给对象属性赋值
+			obj.name='张三';
+			obj.age=12;
+			//给对象添加方法
+			obj.eat = function(food){
+				console.log(this.name+'吃'+food);
+			}
+			//查看对象属性
+			console.log(obj.name);
+			console.log(obj.age);
+			//调用对象方法
+			obj.eat('apple');
+		</script>
+		<script>
+			//定义一个构造方法
+			function Person(pname,page){
+				this.pname=pname;
+				this.page=page;
+				//定义一个吃的方法
+				this.eat=function(food){
+					console.log(page+'岁'+pname+'吃'+food);
+				}
+			}
+			var p = new Person('小龙','12');
+			p.eat('orange');
+		</script>
+		<script>
+			/*  json格式
+			var 对象名 = {
+				属性名:属性值,
+				方法名:方法声明
+			}
+			*/
+			var person = {
+				name:'唐山',
+				address:'china',
+				go:function(){
+					console.log('开车去'+this.address+this.name);
+				}
+			}
+			console.log(person);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
