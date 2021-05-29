@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	<script>
+		function fun1(){
+			/* 如果是Windows调用的方法和访问的属性，那么Windows对象可以省略不写 */
+			window.alert('普通弹框');
+			window.confirm('确认框');
+			var msg = window.prompt('信息输入框');
+			console.log(msg);
+		}
+	</script>
+	<script>
+		
+	</script>
+	</head>
+	<body>
+		<input type="button" value="按钮" onclick="fun1()" />
+	</body>
+</html>
