@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!--此方法打印出来的值为null,这是因为d1使用的时候还不知道后面有没有定义d1，
+		  如果把script放在后面就可打印，此时页面已经加载完毕-->
+		<script>
+			function fun1(){
+				var md1 = document.getElementById('d1');
+				console.log(md1);
+			}
+			fun1();
+		</script>
+	</head>
+	<!-- 给body绑定页面加载事件，此方法就可以访问到d1了 -->
+	<body onload="fun1()">
+		<input type="text" value="页面加载" id="d1" />
+	</body>
+</html>
