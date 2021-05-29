@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<div id='d1' class="a">这是第一个div</div>
+		<div id='d2' class="a">这是第二个div</div>
+		<div id='d3' class="a">这是第三个div</div>
+		<input id='i1' class="a" name=”name1' />
+		<div id='d4' class="b" name=' name1'>这足第四个div</div>
+		<div id='d5' class="b">这是第五个div</div>
+		爱好:
+		<input type="checkbox" name="hobby" id="hobby" value="1" />篮球
+		<input type="checkbox" name="hobby" id="hobby" value="2" />足球
+		<input type="checkbox" name="hobby" id="hobby" value="3" />羽毛球
+		<hr />
+	
+		<input type="button" value="id值获取" onclick='fun1()'  />
+		<input type="button" value="class属性值获取" onclick='fun2()' />
+		<input type="button" value="标签名获取" onclick='fun3()' />
+		<input type="button" value="name属性值获取" onclick='fun4()' />
+	</body>
+	<script>
+		function fun1(){
+			//获取document对象
+			var element1 = document.getElementById("d1");
+			console.log(element1); 
+			<!--替换文本内容-- >
+			element1.innerText = "这是我的div"
+		}
+	</script>
+	<script>
+		function fun2(){
+			/* 获取class为a的所有元素 */
+			var clsNames = document.getElementsByClassName('a');
+			for (var i = 0; i < clsNames.length; i++) {
+				console.log(clsNames[i]);
+			}
+		}
+	</script>
+	<script>
+		function fun3(){
+			/* 标签名获取元素 */
+			var clsNames = document.getElementsByTagName('input');
+			for (var i = 0; i < clsNames.length; i++) {
+				console.log(clsNames[i]);
+			}
+		}
+	</script>
+	<script>
+		function fun4(){
+			/* name属性值获取元素 */
+			var clsNames = document.getElementsByName('hobby');
+			for (var i = 0; i < clsNames.length; i++) {
+				console.log(clsNames[i]);
+			}
+		}
+	</script>
+</html>
