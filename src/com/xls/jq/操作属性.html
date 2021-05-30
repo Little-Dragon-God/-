@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<style>
+			.x {
+			background-color: greenyellow;
+			}
+		</style>
+		<script>
+			//获得属性 jQuery对象(f1元素).attr('属性')
+			function fun1(){
+			console.log($('#f1').attr('color'));
+			console.log($('#f1').attr('id'));
+			console.log($('#f1'));
+			}
+			//修改属性 jQuery对象.attr('属性名','属性值')
+			function fun2(){
+				$('#f1').attr('color','green');
+			}
+			//移除元素:元素.removeAttr('属性名')
+			function fun3(){
+			$('#f1').removeAttr('color');
+			}
+			//添加元素：元素.attr('属性名','属性值')
+			function fun4(){
+				$('#f1').attr('class','x');
+			}
+		</script>
+	</head>
+	<body>
+		
+		<font id='f1' color="red" size="7">牛气冲天</font>
+		<hr />
+		<input type="button" value="获得属性" onclick="fun1()" />
+		<input type="button" value="修改属性" onclick="fun2()" />
+		<input type="button" value="删除属性" onclick="fun3()" />
+		<input type="button" value="添加属性" onclick="fun4()" />
+
+	</body>
+	
+</html>
