@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" value="皮卡丘" id="d1"/>
+		<input type="button" value="进化" onclick="fun1()"/>
+	</body>
+	<script>
+		function fun1(){
+			var element = document.getElementById('d1');
+			//语法一
+			/* 获取属性：节点.属性名  */
+			/* console.log(element.type);
+			console.log(element.value);
+			//修改属性：节点.属性名=属性值
+			element.type='button';
+			element.value='雷丘'; */
+			
+			//语法二
+			//获取属性：getAttribute("属性名")
+			console.log(element.getAttribute("type"));
+			console.log(element.getAttribute("value"));
+			//修改属性：setAttribute("属性名","属性值")
+			element.setAttribute("type","button");
+			element.setAttribute("value","已完成雷丘进化");
+		}
+	</script>
+</html>
